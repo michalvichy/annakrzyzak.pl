@@ -1,0 +1,17 @@
+// normalize
+@import '../../bower_components/normalize-scss/normalize';
+
+// Project settings
+@import '_settings';
+
+// Vendors
+@import '../../bower_components/csswizardry-grids/csswizardry-grids';
+@import '../../bower_components/sass-mediaqueries/media-queries';
+
+// Variables
+@import 'vars';
+
+
+@import 'components/forms';
+@import 'layouts/header';
+@import 'layouts/footer';

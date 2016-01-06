@@ -1,0 +1,45 @@
+/**
+ * Grid
+ */
+$gutter: 0;
+$push: true;
+$pull: true;
+
+
+/**
+ * Breakpoints
+ */
+$phone: 320px;
+$tablet: 767px;
+$desktop: 1024px;
+$desktop-medium: 1280px;
+$desktop-wide: 1440px;
+
+
+$breakpoints: (
+    'phone' '(min-width: #{$phone})',
+    'tab' '(min-width: #{$tablet})',
+    'desk' '(min-width: #{$desktop})',
+    'desk-med' '(min-width: #{$desktop-medium})',
+    'desk-wide' '(min-width: #{$desktop-wide})'
+);
+
+$breakpoint-has-widths: ('phone', 'tab', 'desk', 'desk-med', 'desk-wide');
+$breakpoint-has-push: ('phone', 'tab', 'desk', 'desk-med', 'desk-wide');
+$breakpoint-has-pull: ('phone', 'tab', 'desk', 'desk-med', 'desk-wide');
+
+
+/**
+ * Fonts
+ */
+
+/**
+ * to set
+
+$default-sans-fonts: "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+$base-font-family: 'Lato', $default-sans-fonts;
+$header-font-family: 'lato', $default-sans-fonts;
+*/
+
+$base-font-size: 14px;
+$base-font-weight: 400;
