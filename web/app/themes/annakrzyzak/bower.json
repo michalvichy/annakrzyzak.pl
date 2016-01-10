@@ -12,7 +12,8 @@
     "modernizr": "2.8.2",
     "normalize-scss": "~3.0.3",
     "sass-mediaqueries": "~1.6.1",
-    "owl.carousel": "OwlCarousel2#~2.0.0-beta.3"
+    "owl.carousel": "OwlCarousel2#~2.0.0-beta.3",
+    "skrollr": "scrollr#~0.6.30"
   },
   "overrides": {
     "modernizr": {
