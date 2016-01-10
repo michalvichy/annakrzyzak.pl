@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46853543e79d10bf557df93a4bf2ba31",
+    "hash": "efc358057a30f8bcd64580670ff7ba40",
+    "content-hash": "0f6aaf3fce87db6304f26c3f2972d3dc",
     "packages": [
         {
             "name": "composer/installers",
@@ -239,6 +240,26 @@
                 "environment"
             ],
             "time": "2015-10-28 18:53:35"
+        },
+        {
+            "name": "wpackagist-plugin/custom-field-suite",
+            "version": "2.5.3",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/custom-field-suite/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-field-suite.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-field-suite/"
         }
     ],
     "packages-dev": [],
