@@ -1,0 +1,18 @@
+// Paragraphs
+// -----------
+.section-paragraph {
+    line-height: 1.5454;
+    text-align: center;
+
+    @include min-screen($desktop) {
+        font-size: 22px;
+    }
+}
+
+.section-paragraph--grey {
+    color: $section-paragraph-color;
+}
+
+.section-paragraph--white {
+    color: $white;
+}

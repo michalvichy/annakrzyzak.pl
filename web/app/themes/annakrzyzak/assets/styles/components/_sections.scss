@@ -1,8 +1,24 @@
 // Sections
 // --------
-
 .section {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     @include min-screen($desktop) {
         padding: 117px 0;
     }
+}
+
+.news {
+    background-image: url('../../dist/images/news-bg.jpg');
+}
+
+.achivements {
+    background-image: url('../../dist/images/achiv-bg.jpg');
+}
+
+.gallery {
+    background-image: url('../../dist/images/gallery-bg.jpg');
 }

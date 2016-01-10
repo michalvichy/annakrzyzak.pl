@@ -33,6 +33,10 @@
 
     &:not(.navigation-item__logo) {
         @include min-screen($desktop) {
+            padding: 10px 25px 8px;
+        }
+
+        @include min-screen($desktop-medium) {
             padding: 10px 30px 8px;
         }
     }

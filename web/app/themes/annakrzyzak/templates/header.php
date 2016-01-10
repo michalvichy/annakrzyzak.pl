@@ -16,10 +16,13 @@
                 <a class="navigation-item__link" href="#music">Muzyka</a>
             </div>
             <div class="navigation-item">
-                <a class="navigation-item__link" href="#galery">Galeria</a>
+                <a class="navigation-item__link" href="#gallery">Galeria</a>
             </div>
             <div class="navigation-item">
                 <a class="navigation-item__link" href="#contact">Kontakt</a>
+            </div>
+            <div class="navigation-item">
+                <a class="navigation-item__link" href="#news">Aktualności</a>
             </div>
         </nav>
     </div>
