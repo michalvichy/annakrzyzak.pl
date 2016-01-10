@@ -11,7 +11,7 @@ $pull: true;
  */
 $phone: 320px;
 $tablet: 767px;
-$desktop: 1024px;
+$desktop: 1025px;
 $desktop-medium: 1280px;
 $desktop-wide: 1440px;
 
@@ -38,8 +38,8 @@ $breakpoint-has-pull: ('phone', 'tab', 'desk', 'desk-med', 'desk-wide');
 
 $default-sans-fonts: "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 $base-font-family: 'Lato', $default-sans-fonts;
-$header-font-family: 'lato', $default-sans-fonts;
 */
 
+$base-font-family: 'Trojan';
 $base-font-size: 14px;
 $base-font-weight: 400;

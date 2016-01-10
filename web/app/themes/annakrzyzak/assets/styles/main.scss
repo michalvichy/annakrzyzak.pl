@@ -1,5 +1,6 @@
 // normalize
-@import '../../bower_components/normalize-scss/normalize';
+@import '../../bower_components/normalize-scss/normalize.scss';
+@import '../../bower_components/owl.carousel/dist/assets/owl.carousel.css';
 
 // Project settings
 @import '_settings';
@@ -11,7 +12,16 @@
 // Variables
 @import 'vars';
 
+// Fonts
+@import 'components/fonts';
 
-@import 'components/forms';
+// Base
+@import 'base';
+
+@import 'components/navigation';
+@import 'components/banner';
+@import 'components/headlines';
+@import 'components/sections';
+@import 'components/buttons';
 @import 'layouts/header';
 @import 'layouts/footer';

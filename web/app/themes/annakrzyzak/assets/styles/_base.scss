@@ -1,0 +1,19 @@
+body,
+html {
+    position: relative;
+    color: $black;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+}

@@ -1,0 +1,65 @@
+// Navigation
+// -----------
+.navigation-wrapper {
+    @include min-screen($desktop) {
+        height: 107px;
+    }
+}
+
+.navigation {
+    margin: 0 auto;
+    background-color: $white;
+    text-align: center;
+    transition: padding 300ms ease;
+    z-index: 100;
+
+    @include min-screen($desktop) {
+        padding: 20px 0;
+    }
+
+    &.scrolled {
+        position: fixed;
+        width: 100%;
+
+        @include min-screen($desktop) {
+            padding: 3px 0 0;
+        }
+    }
+}
+
+.navigation-item {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:not(.navigation-item__logo) {
+        @include min-screen($desktop) {
+            padding: 10px 30px 8px;
+        }
+    }
+}
+
+.navigation-item__link {
+    position: relative;
+    font-weight: 400;
+
+    @include min-screen($desktop) {
+        font-size: 15px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $black;
+        transition: width 300ms ease-in;
+    }
+
+    &:hover {
+        &:before {
+            width: 100%;
+        }
+    }
+}
