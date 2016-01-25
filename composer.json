@@ -37,7 +37,8 @@
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.4",
-    "wpackagist-plugin/custom-field-suite": "^2.5"
+    "wpackagist-plugin/custom-field-suite": "^2.5",
+    "roots/soil": "3.6.2"
   },
   "extra": {
     "installer-paths": {
