@@ -1,6 +1,5 @@
 // normalize
 @import '../../bower_components/normalize-scss/normalize.scss';
-@import '../../bower_components/owl.carousel/dist/assets/owl.carousel.css';
 
 // Project settings
 @import '_settings';
@@ -8,6 +7,8 @@
 // Vendors
 @import '../../bower_components/csswizardry-grids/csswizardry-grids';
 @import '../../bower_components/sass-mediaqueries/media-queries';
+@import '../../bower_components/owl-carousel/owl-carousel/owl.carousel';
+@import '../../bower_components/owl-carousel/owl-carousel/owl.theme';
 
 // Variables
 @import 'vars';

@@ -1,8 +1,19 @@
-<div class="container">
-    <div class="banner"></div>
+<?php
+    $homepage_fields = CFS() -> get();
+    $banner_images = $homepage_fields['banner_images'];
+?>
 
+<section class="homepage-banner">
+    <div class="container">
+        <div class="owl-carousel js-banner-carousel">
+            <?php foreach ($banner_images as $image):
+                $image_url = $image['banner_image'];
+            ?>
+                <img src="<?php echo $image_url; ?>" alt="">
+            <?php endforeach; ?>
+        </div>
     </div>
-</div>
+</section>
 
 <section id="news" class="section news">
     <div class="grid grid--center">

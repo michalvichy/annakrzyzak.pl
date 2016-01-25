@@ -2,6 +2,7 @@ window.BC = window.BC || {};
 
 window.BC.common = function($) {
     var $window = $(window);
+    var isDesktop = $window.innerWidth() > 1024 ? true : false;
 
     function scrolledNavigation() {
         var $nav = $('.js-navigation');
@@ -46,9 +47,29 @@ window.BC.common = function($) {
         $button.on('click', function() {
             $('html, body').stop().animate({ scrollTop: 0 }, 'slow');
         });
-    };
+    }
 
-    scrolledNavigation();
-    smoothScrolling();
-    toTopButton();
+    function skrollrInit() {
+        if (isDesktop) {
+            skrollr.init();
+        }
+    }
+
+    function initCarousel() {
+        var $carousel = $('.js-banner-carousel');
+        console.log('chuj!');
+        $carousel.owlCarousel();
+    }
+
+
+    $(document).ready(function() {
+        scrolledNavigation();
+        smoothScrolling();
+        toTopButton();
+        initCarousel();
+    });
+
+    $window.load(function() {
+        // skrollrInit();
+    });
 };

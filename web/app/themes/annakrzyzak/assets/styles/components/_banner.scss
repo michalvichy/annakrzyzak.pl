@@ -1,12 +1,5 @@
 // Banner
 // ------
-.banner {
-    height: 603px;
-    background-image: url('../images/main-banner.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @include min-screen($desktop) {
-        margin-bottom: 40px;
-    }
+.homepage-banner {
+    margin-bottom: 20px;
 }

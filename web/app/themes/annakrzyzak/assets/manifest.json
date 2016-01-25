@@ -20,10 +20,8 @@
       "bower": ["modernizr"]
     },
     "overrides": {
-        "owl.carousel": {
-            "main": [
-                "../bower_components/owl.carousel/dist/owl.carousel.min.js"
-            ]
+        "owl-carousel": {
+            "main": "../bower_components/owl-carousel/owl-carousel/owl.carousel.js"
         }
     }
   },
