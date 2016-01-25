@@ -1,6 +1,14 @@
 <?php
     $homepage_fields = CFS() -> get();
     $banner_images = $homepage_fields['banner_images'];
+    $news_desc = $homepage_fields['news']
+    $about_me_desc = $homepage_fields['about_me'];
+    $about_me_img = $homepage_fields['about_me_img'];
+    $achievements_desc = $homepage_fields['achievements'];
+    $music_desc = $homepage_fields['music'];
+    $gallery_desc = $homepage_fields['gallery'];
+    $contact_desc = $homepage_fields['contact'];
+    $contact_img = $homepage_fields['contact_img'];
 ?>
 
 <section class="homepage-banner">
@@ -27,11 +35,13 @@
     <div class="grid grid--center">
         <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
             <h2 class="section-headline section-headline--grey">O mnie</h2>
-            <p class="section-paragraph section-paragraph--grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed leo hendrerit,
-                venenatis mauris vel, luctus magna. Donec mi ipsum, accumsan id odio vitae, pharetra dapibus quam.
-                Sed viverra tellus in ante vulputate feugiat. Proin purus nisl, aliquam sit amet ligula et, blandit condimentum enimdevice.
-            </p>
+            <?php if ($about_me_desc != ''): ?>
+                <p class="section-paragraph section-paragraph--grey">
+                    <?php echo $about_me_desc; ?>
+                </p>
+            <?php endif; ?>
+
+            <img class="section__image" src="<?php echo $about_me_img; ?>" alt="">
         </div>
     </div>
 </section>
@@ -40,6 +50,11 @@
     <div class="grid grid--center">
         <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
             <h2 class="section-headline section-headline--white">Osiągnięcia</h2>
+            <?php if ($achievements_desc != ''): ?>
+                <p class="section-paragraph section-paragraph--white">
+                    <?php echo $achievements_desc; ?>
+                </p>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -48,10 +63,11 @@
     <div class="grid grid--center">
         <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
             <h2 class="section-headline section-headline--grey">Muzyka</h2>
-            <p class="section-paragraph section-paragraph--grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed leo hendrerit, venenatis mauris vel, luctus magna.
-                Donec mi ipsum, accumsan id odio vitae, pharetra
-            </p>
+            <?php if ($music_desc != ''): ?>
+                <p class="section-paragraph section-paragraph--grey">
+                    <?php echo $music_desc; ?>
+                </p>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -60,9 +76,11 @@
     <div class="grid grid--center">
         <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
             <h2 class="section-headline section-headline--white">Galeria</h2>
-            <p class="section-paragraph section-paragraph--white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            <?php if ($gallery_desc != ''): ?>
+                <p class="section-paragraph section-paragraph--white">
+                    <?php echo $gallery_desc; ?>
+                </p>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -71,9 +89,13 @@
     <div class="grid grid--center">
         <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
             <h2 class="section-headline section-headline--grey">Kontakt</h2>
-            <p class="section-paragraph section-paragraph--grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed leo hendrerit
-            </p>
+            <?php if ($contact_desc != ''): ?>
+                <p class="section-paragraph section-paragraph--grey">
+                    <?php echo $contact_desc; ?>
+                </p>
+            <?php endif; ?>
+
+            <img class="section__image" src="<?php echo $contact_img; ?>" alt="">
         </div>
     </div>
 </section>
