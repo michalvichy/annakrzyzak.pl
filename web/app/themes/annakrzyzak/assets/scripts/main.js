@@ -1,5 +1,5 @@
-window.BC = window.BC || {};
-window.BC._submodules = window.BC._submodules || {};
+window.AK = window.AK || {};
+window.AK._submodules = window.AK._submodules || {};
 
 (function($) {
 
@@ -9,13 +9,13 @@ window.BC._submodules = window.BC._submodules || {};
 
         var getSubmodule = function(name) {
             return function() {
-                window.BC._submodules[name]($);
+                window.AK._submodules[name]($);
             };
         };
 
         $.each(['common'].concat(bodyClasses), function(i, module) {
-            if ($.isFunction(window.BC[module])) {
-                window.BC[module]($);
+            if ($.isFunction(window.AK[module])) {
+                window.AK[module]($);
             }
         });
     });

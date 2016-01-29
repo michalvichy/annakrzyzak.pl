@@ -1,0 +1,29 @@
+.contact-form__container {
+    display: none;
+    text-align: center;
+
+    &.visible {
+        display: block;
+    }
+
+    .ajax-loader {
+        display: block;
+        width: 16px;
+        margin: 0 auto !important;
+    }
+}
+
+input,
+textarea {
+    margin: 10px 0;
+    padding: 7px 10px 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    text-transform: none;
+}
+
+div.wpcf7-mail-sent-ok {
+    border: 0;
+}

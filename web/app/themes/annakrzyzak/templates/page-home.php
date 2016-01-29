@@ -1,7 +1,7 @@
 <?php
     $homepage_fields = CFS() -> get();
     $banner_images = $homepage_fields['banner_images'];
-    $news_desc = $homepage_fields['news']
+    $news_desc = $homepage_fields['news'];
     $about_me_desc = $homepage_fields['about_me'];
     $about_me_img = $homepage_fields['about_me_img'];
     $achievements_desc = $homepage_fields['achievements'];
@@ -27,6 +27,11 @@
     <div class="grid grid--center">
         <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
             <h2 class="section-headline section-headline--white">Aktualności</h2>
+            <?php if ($news_desc != ''): ?>
+                <p class="section-paragraph section-paragraph--white">
+                    <?php echo $news_desc; ?>
+                </p>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -96,6 +101,14 @@
             <?php endif; ?>
 
             <img class="section__image" src="<?php echo $contact_img; ?>" alt="">
+
+            <div class="btn__container">
+                <button class="btn btn-primary js-show-contactform">Napisz</button>
+            </div>
+
+            <div class="contact-form__container js-contactform">
+                <?php echo do_shortcode('[contact-form-7 id="22" title="Formularz kontaktowy"]'); ?>
+            </div>
         </div>
     </div>
 </section>

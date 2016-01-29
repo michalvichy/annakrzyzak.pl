@@ -1,6 +1,6 @@
-window.BC = window.BC || {};
+window.AK = window.AK || {};
 
-window.BC.common = function($) {
+window.AK.common = function($) {
     var $window = $(window);
     var isDesktop = $window.innerWidth() > 1024 ? true : false;
 
@@ -49,6 +49,19 @@ window.BC.common = function($) {
         });
     }
 
+    function showContactForm() {
+        var $btn = $('.js-show-contactform');
+        var $contactForm = $('.js-contactform');
+
+        console.log('ciul');
+
+        $btn.on('click', function() {
+            console.log('dupa');
+            $contactForm.addClass('visible');
+            $(this).hide();
+        });
+    }
+
     function skrollrInit() {
         if (isDesktop) {
             skrollr.init();
@@ -66,7 +79,8 @@ window.BC.common = function($) {
         scrolledNavigation();
         smoothScrolling();
         toTopButton();
-        initCarousel();
+        // initCarousel();
+        showContactForm();
     });
 
     $window.load(function() {
