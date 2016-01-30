@@ -2,10 +2,12 @@
     $homepage_fields = CFS() -> get();
     $banner_images = $homepage_fields['banner_images'];
     $news_desc = $homepage_fields['news'];
-    $about_me_desc = $homepage_fields['about_me'];
+    $about_me_desc = $homepage_fields['about_me_short'];
     $about_me_img = $homepage_fields['about_me_img'];
+    $about_me_long = $homepage_fields['about_me_long'];
     $achievements_desc = $homepage_fields['achievements'];
     $music_desc = $homepage_fields['music'];
+    $music_soundcloud = $homepage_fields['music_soundcloud'];
     $gallery_desc = $homepage_fields['gallery'];
     $contact_desc = $homepage_fields['contact'];
     $contact_img = $homepage_fields['contact_img'];
@@ -47,6 +49,12 @@
             <?php endif; ?>
 
             <img class="section__image" src="<?php echo $about_me_img; ?>" alt="">
+
+            <div class="section__content section__content--about">
+                <?php
+                    echo $about_me_long;
+                ?>
+            </div>
         </div>
     </div>
 </section>
@@ -60,6 +68,9 @@
                     <?php echo $achievements_desc; ?>
                 </p>
             <?php endif; ?>
+            <div class="section__content">
+
+            </div>
         </div>
     </div>
 </section>
@@ -73,6 +84,9 @@
                     <?php echo $music_desc; ?>
                 </p>
             <?php endif; ?>
+            <div class="section__content">
+                <?php echo do_shortcode('[soundcloud]' . $music_soundcloud . '[/soundcloud]'); ?>
+            </div>
         </div>
     </div>
 </section>

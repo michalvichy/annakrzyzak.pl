@@ -53,10 +53,7 @@ window.AK.common = function($) {
         var $btn = $('.js-show-contactform');
         var $contactForm = $('.js-contactform');
 
-        console.log('ciul');
-
         $btn.on('click', function() {
-            console.log('dupa');
             $contactForm.addClass('visible');
             $(this).hide();
         });
@@ -70,8 +67,15 @@ window.AK.common = function($) {
 
     function initCarousel() {
         var $carousel = $('.js-banner-carousel');
-        console.log('chuj!');
-        $carousel.owlCarousel();
+
+        $('.js-banner-carousel').slick({
+            dots: true,
+            arrows: true,
+            autoplay: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+        });
     }
 
 
@@ -79,11 +83,10 @@ window.AK.common = function($) {
         scrolledNavigation();
         smoothScrolling();
         toTopButton();
-        // initCarousel();
         showContactForm();
+        initCarousel();
     });
 
     $window.load(function() {
-        // skrollrInit();
     });
 };

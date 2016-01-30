@@ -20,8 +20,11 @@
       "bower": ["modernizr"]
     },
     "overrides": {
-        "owl-carousel": {
-            "main": "../bower_components/owl-carousel/owl-carousel/owl.carousel.js"
+        "skrollr": {
+            "main": "../bower_components/skrollr/dist/skrollr.min.js"
+        },
+        "slick-carousel": {
+            "main": "../bower_components/slick-carousel/slick/slick.js"
         }
     }
   },
