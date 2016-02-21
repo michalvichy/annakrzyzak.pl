@@ -67,3 +67,20 @@
         height: 180px;
     }
 }
+
+.section__content--about {
+    p {
+        @extend .section-paragraph;
+        @extend .section-paragraph--grey;
+    }
+
+    ul,
+    ol {
+        li {
+            @extend .section-paragraph--grey;
+            font-size: 18px;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+    }
+}
