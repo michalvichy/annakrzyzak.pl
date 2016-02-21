@@ -22,9 +22,6 @@
     "overrides": {
         "skrollr": {
             "main": "../bower_components/skrollr/dist/skrollr.min.js"
-        },
-        "slick-carousel": {
-            "main": "../bower_components/slick-carousel/slick/slick.js"
         }
     }
   },

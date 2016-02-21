@@ -9,6 +9,7 @@
 @import '../../bower_components/sass-mediaqueries/media-queries';
 @import '../../bower_components/slick-carousel/slick/slick.scss';
 @import '../../bower_components/slick-carousel/slick/slick-theme.scss';
+@import '../bower_components/lightbox2/dist/css/lightbox.css';
 
 // Variables
 @import 'vars';
@@ -26,5 +27,6 @@
 @import 'components/buttons';
 @import 'components/paragraphs';
 @import 'components/forms';
+@import 'components/anchor';
 @import 'layouts/header';
 @import 'layouts/footer';

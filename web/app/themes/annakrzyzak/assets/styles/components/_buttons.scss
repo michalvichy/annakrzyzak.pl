@@ -19,16 +19,21 @@
 }
 
 .btn-primary {
-    padding: 17px 45px;
+    padding: 15px 40px;
     background-color: $btn-primary-background;
     color: $white;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 12px;
     border: 0;
     text-transform: uppercase;
 
     .no-touch &:hover {
         background-color: $btn-primary-hover;
+    }
+
+    @include min-screen($desktop) {
+        padding: 17px 45px;
+        font-size: 15px
     }
 }
 

@@ -10,7 +10,15 @@
 
 .footer--left,
 .footer--right {
-    text-align: center;
+    text-align: center !important;
+}
+
+.footer--right {
+    margin-bottom: 20px;
+
+    @include min-screen($desktop) {
+        margin-bottom: 0;
+    }
 }
 
 .footer-menu {

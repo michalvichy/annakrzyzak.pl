@@ -68,10 +68,30 @@
                     <?php echo $achievements_desc; ?>
                 </p>
             <?php endif; ?>
-            <div class="section__content">
+                <div class="achivements-carousel js-achivements">
+                    <?php
+                        $args = array(
+                            'post_type' => 'ak_achivments',
+                            'post_status' => 'publish'
+                        );
 
+                        $query = new WP_Query($args);
+
+                        if ( $query->have_posts() ) :
+                            while ( $query->have_posts() ) : $query->the_post();
+                                $post_id = $post->ID;
+                                $post_fields = CFS() -> get(false, $post_id);
+                                $post_img_url = $post_fields['achievement_img'];
+                    ?>
+                        <div class="achievements__single">
+                            <a href="<?php echo $post_img_url ?>" data-lightbox="Achivements" data-title="<?php the_title(); ?>">
+                                <div class="achievement__img" style="background-image:url('<?= $post_img_url ?>');"></div>
+                                <!-- <img src="<?php echo $post_img_url ?>" alt="<?php the_title(); ?>"> -->
+                            </a>
+                        </div>
+                    <?php endwhile; endif; ?>
+                </div>
             </div>
-        </div>
     </div>
 </section>
 
