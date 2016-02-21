@@ -1,17 +1,17 @@
 // Sections
 // --------
 .section {
-    padding: 70px 0;
+    padding: 70px 15px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
     @include min-screen($tablet) {
-        padding: 100px 0;
+        padding: 100px 15px;
     }
 
     @include min-screen($desktop) {
-        padding: 117px 0;
+        padding: 117px 15px;
         background-attachment: fixed;
     }
 }
@@ -58,7 +58,7 @@
 
 .achievement__img {
     width: 100%;
-    height: 250px;
+    height: 350px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -78,9 +78,12 @@
     ol {
         li {
             @extend .section-paragraph--grey;
-            font-size: 18px;
             margin-bottom: 5px;
             line-height: 1.5;
+
+            @include min-screen($desktop) {
+                font-size: 18px;
+            }
         }
     }
 }
