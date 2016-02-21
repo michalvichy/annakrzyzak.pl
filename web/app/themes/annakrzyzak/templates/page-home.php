@@ -13,6 +13,7 @@
     $contact_img = $homepage_fields['contact_img'];
 ?>
 
+<div id="home" class="anchor"></div>
 <section class="homepage-banner">
     <div class="container">
         <div class="owl-carousel js-banner-carousel">
@@ -25,9 +26,10 @@
     </div>
 </section>
 
-<section id="news" class="section news">
+<div id="news" class="anchor"></div>
+<section class="section news">
     <div class="grid grid--center">
-        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
+        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--six-tenths">
             <h2 class="section-headline section-headline--white">Aktualności</h2>
             <?php if ($news_desc != ''): ?>
                 <p class="section-paragraph section-paragraph--white">
@@ -38,9 +40,10 @@
     </div>
 </section>
 
-<section id="about" class="section about">
+<div id="about" class="anchor"></div>
+<section class="section about">
     <div class="grid grid--center">
-        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
+        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--six-tenths">
             <h2 class="section-headline section-headline--grey">O mnie</h2>
             <?php if ($about_me_desc != ''): ?>
                 <p class="section-paragraph section-paragraph--grey">
@@ -59,9 +62,10 @@
     </div>
 </section>
 
-<section id="achivements" class="section achivements">
+<div id="achivements" class="anchor"></div>
+<section class="section achivements">
     <div class="grid grid--center">
-        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
+        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--six-tenths">
             <h2 class="section-headline section-headline--white">Osiągnięcia</h2>
             <?php if ($achievements_desc != ''): ?>
                 <p class="section-paragraph section-paragraph--white">
@@ -89,15 +93,16 @@
                                 <!-- <img src="<?php echo $post_img_url ?>" alt="<?php the_title(); ?>"> -->
                             </a>
                         </div>
-                    <?php endwhile; endif; ?>
+                    <?php wp_reset_query(); endwhile; endif; ?>
                 </div>
             </div>
     </div>
 </section>
 
-<section id="music" class="section music">
+<div id="music" class="anchor"></div>
+<section class="section music">
     <div class="grid grid--center">
-        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
+        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--six-tenths">
             <h2 class="section-headline section-headline--grey">Muzyka</h2>
             <?php if ($music_desc != ''): ?>
                 <p class="section-paragraph section-paragraph--grey">
@@ -111,9 +116,10 @@
     </div>
 </section>
 
-<section id="gallery" class="section gallery">
+<div id="gallery" class="anchor"></div>
+<section class="section gallery">
     <div class="grid grid--center">
-        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
+        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--six-tenths">
             <h2 class="section-headline section-headline--white">Galeria</h2>
             <?php if ($gallery_desc != ''): ?>
                 <p class="section-paragraph section-paragraph--white">
@@ -124,9 +130,10 @@
     </div>
 </section>
 
-<section id="contact" class="section contact">
+<div id="contact" class="anchor"></div>
+<section class="section contact">
     <div class="grid grid--center">
-        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--one-half">
+        <div class="grid__item tab--three-quarters desk--three-fifths desk-med--six-tenths">
             <h2 class="section-headline section-headline--grey">Kontakt</h2>
             <?php if ($contact_desc != ''): ?>
                 <p class="section-paragraph section-paragraph--grey">

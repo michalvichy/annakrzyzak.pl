@@ -1,5 +1,9 @@
 // Banner
 // ------
 .homepage-banner {
-    margin-bottom: 20px;
+    margin: 107px 0 20px;
+
+    @include min-screen($desktop) {
+        
+    }
 }

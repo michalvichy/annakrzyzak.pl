@@ -78,11 +78,11 @@ window.AK.common = function($) {
         });
 
         $('.js-achivements').slick({
-            infinite: true,
             slidesToShow: 5,
-            slidesToScroll: 3,
+            slidesToScroll: 5,
             dots: true,
             arrows: false,
+            infinite: false,
             adaptiveHeight: true,
             responsive: [
                 {
