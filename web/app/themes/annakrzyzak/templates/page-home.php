@@ -131,6 +131,42 @@
                     <?php echo $gallery_desc; ?>
                 </p>
             <?php endif; ?>
+            <div class="gallery-container js-gallery">
+                <?php
+                    $args = array(
+                        'post_type' => 'ak_gallery',
+                        'post_status' => 'publish'
+                    );
+
+                    $query = new WP_Query($args);
+
+                    if ( $query->have_posts() ) :
+                        while ( $query->have_posts() ) : $query->the_post();
+                            $album_id = $post->ID;
+                            $album_title = get_the_title();
+                            $album_fields = CFS() -> get(false, $album_id);
+                            $album_main_photo = $album_fields['gallery_main_photo'];
+                            $album_photos = $album_fields['gallery_album'];
+                ?>
+                <div class="single-album">
+                    <div class="single-album__cover" data-title="<?= $album_title; ?>">
+                        <a href="<?= $album_main_photo; ?>" data-lightbox="<?= $album_title; ?>" data-title="<?= $album_title; ?>">
+                            <img src="<?= $album_main_photo; ?>" alt="cover" />
+                        </a>
+                    </div>
+
+                    <div class="single-album__photos">
+                        <?php foreach ($album_photos as $photo) :
+                            $photo_url = $photo['gallery_album_photo'];
+                        ?>
+                            <a href="<?= $photo_url; ?>" data-lightbox="<?= $album_title; ?>" data-title="<?= $album_title; ?>">
+                                <img src="<?= $photo['gallery_album_photo']; ?>" alt="single-gallery-photo">
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php wp_reset_query(); endwhile; endif; ?>
+            </div>
         </div>
     </div>
 </section>
