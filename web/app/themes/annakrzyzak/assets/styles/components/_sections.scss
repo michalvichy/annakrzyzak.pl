@@ -69,6 +69,8 @@
 }
 
 .section__content--about {
+    display: none;
+
     p {
         @extend .section-paragraph;
         @extend .section-paragraph--grey;

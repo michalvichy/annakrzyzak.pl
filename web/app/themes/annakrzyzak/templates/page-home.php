@@ -54,11 +54,11 @@
             <img class="section__image" src="<?php echo $about_me_img; ?>" alt="ania">
 
             <div class="btn__container">
-                <a href="#more" class="btn btn-primary">Więcej</a>
+                <a href="#more" class="btn btn-primary js-btn-more">Więcej</a>
             </div>
 
             <div id="more" class="anchor"></div>
-            <div class="section__content section__content--about">
+            <div class="section__content section__content--about js-content-more">
                 <?php
                     echo $about_me_long;
                 ?>
