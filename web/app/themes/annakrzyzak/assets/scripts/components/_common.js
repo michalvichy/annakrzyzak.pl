@@ -78,6 +78,7 @@ window.AK.common = function($) {
         var $carousel = $('.js-banner-carousel');
 
         $('.js-banner-carousel').slick({
+            accessibility: false,
             dots: true,
             arrows: true,
             autoplay: true,
@@ -87,6 +88,7 @@ window.AK.common = function($) {
         });
 
         $('.js-achivements').slick({
+            accessibility: false,
             slidesToShow: 5,
             slidesToScroll: 5,
             dots: true,
@@ -120,6 +122,7 @@ window.AK.common = function($) {
         });
 
         $('.js-gallery').slick({
+            accessibility: false,
             slidesToShow: 3,
             slidesToScroll: 3,
             dots: true,
@@ -163,8 +166,14 @@ window.AK.common = function($) {
     }
 
     function showAboutMore() {
-        $('.js-btn-more').on('click', function(){
+        $('.js-btn-more').on('click', function(e){
+            var text = e.target.innerHTML;
             $('.js-content-more').slideToggle();
+
+            text = text === 'Więcej' ? 'Zwiń' : 'Więcej';
+
+            console.log(text === 'Więcej');
+            e.target.innerHTML = text;
         });
     }
 

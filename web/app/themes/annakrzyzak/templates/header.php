@@ -22,9 +22,20 @@
                 <div class="navigation-item">
                     <a class="navigation-item__link" href="#contact">Kontakt</a>
                 </div>
-                <div class="navigation-item">
-                    <a class="navigation-item__link" href="#news">Aktualności</a>
+                <div class="navigation-item navigation-item--icon">
+                    <a class="navigation-item__link" target="_blank" href="https://www.facebook.com/annakrzyzakviola/">
+                        <span class="icon icon-facebook"></span>
+                    </a>
                 </div>
+                <div class="navigation-item navigation-item--icon">
+                    <a class="navigation-item__link" target="_blank" href="http://twitter.com/annakrzyzakvla"><span class="icon icon-twitter"></span></a>
+                </div>
+                <div class="navigation-item navigation-item--icon">
+                    <a class="navigation-item__link" target="_blank" href="http://instagram.com/annakrzyzakviola"><span class="icon icon-instagram"></span></a>
+                </div>
+                <!-- <div class="navigation-item">
+                    <a class="navigation-item__link" href="#news">Aktualności</a>
+                </div> -->
             </div>
 
             <button class="mobile-nav-trigger js-nav-trigger">
@@ -34,7 +45,7 @@
                 <span></span>
                 <span></span>
                 <span></span>
-        </button>
+            </button>
         </nav>
     </div>
 </header>

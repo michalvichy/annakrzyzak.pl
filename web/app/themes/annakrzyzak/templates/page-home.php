@@ -26,7 +26,7 @@
     </div>
 </section>
 
-<div id="news" class="anchor"></div>
+<!-- <div id="news" class="anchor"></div>
 <section class="section news">
     <div class="grid grid--center">
         <div class="grid__item tab--three-quarters desk--three-fifths desk-med--six-tenths">
@@ -38,7 +38,7 @@
             <?php endif; ?>
         </div>
     </div>
-</section>
+</section> -->
 
 <div id="about" class="anchor"></div>
 <section class="section about">
@@ -81,7 +81,8 @@
                     <?php
                         $args = array(
                             'post_type' => 'ak_achivments',
-                            'post_status' => 'publish'
+                            'post_status' => 'publish',
+                            'posts_per_page' => -1
                         );
 
                         $query = new WP_Query($args);
@@ -95,7 +96,6 @@
                         <div class="achievements__single">
                             <a href="<?php echo $post_img_url ?>" data-lightbox="Achivements" data-title="<?php the_title(); ?>">
                                 <div class="achievement__img" style="background-image:url('<?= $post_img_url ?>');"></div>
-                                <!-- <img src="<?php echo $post_img_url ?>" alt="<?php the_title(); ?>"> -->
                             </a>
                         </div>
                     <?php wp_reset_query(); endwhile; endif; ?>
@@ -104,6 +104,11 @@
     </div>
 </section>
 
+<?php
+    if ($music_soundcloud == '') {
+        $music_desc = 'W trakce realizacji';
+    }
+?>
 <div id="music" class="anchor"></div>
 <section class="section music">
     <div class="grid grid--center">
@@ -114,9 +119,11 @@
                     <?php echo $music_desc; ?>
                 </p>
             <?php endif; ?>
-            <div class="section__content">
-                <?php echo do_shortcode('[soundcloud]' . $music_soundcloud . '[/soundcloud]'); ?>
-            </div>
+            <?php if ($music_soundcloud != ''): ?>
+                <div class="section__content">
+                    <?php echo do_shortcode('[soundcloud]' . $music_soundcloud . '[/soundcloud]'); ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -135,7 +142,8 @@
                 <?php
                     $args = array(
                         'post_type' => 'ak_gallery',
-                        'post_status' => 'publish'
+                        'post_status' => 'publish',
+                        'posts_per_page' => -1
                     );
 
                     $query = new WP_Query($args);
@@ -150,9 +158,12 @@
                 ?>
                 <div class="single-album">
                     <div class="single-album__cover" data-title="<?= $album_title; ?>">
-                        <a href="<?= $album_main_photo; ?>" data-lightbox="<?= $album_title; ?>" data-title="<?= $album_title; ?>">
-                            <img src="<?= $album_main_photo; ?>" alt="cover" />
-                        </a>
+                        <a href="<?= $album_main_photo; ?>"
+                            data-lightbox="<?= $album_title; ?>"
+                            data-title="<?= $album_title; ?>"
+                            style="background-image: url('<?= $album_main_photo; ?>');"
+                            class="single-album__link"
+                        ></a>
                     </div>
 
                     <div class="single-album__photos">

@@ -7,7 +7,7 @@
                     <li><a href="#achivements">Osiągnięcia</a></li>
                     <li><a href="#music">Muzyka</a></li>
                     <li><a href="#gallery">Galeria</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
             </div><!--
             --><div class="grid__item desk--one-half footer--left">
