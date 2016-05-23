@@ -1,5 +1,5 @@
-window.BC = window.BC || {};
+window.AK = window.AK || {};
 
-window.BC.home = function($) {
+window.AK.home = function($) {
 
 };

@@ -2,7 +2,8 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/*.js"
+          "scripts/components/*.js",
+          "scripts/main.js"
       ],
       "main": true
     },
@@ -13,13 +14,18 @@
       "main": true
     },
     "jquery.js": {
-      "bower": ["jquery"]
+      "main": "../bower_components/jquery/dist/jquery.min.js"
     },
     "modernizr.js": {
       "bower": ["modernizr"]
+    },
+    "overrides": {
+        "skrollr": {
+            "main": "../bower_components/skrollr/dist/skrollr.min.js"
+        }
     }
   },
   "config": {
-    "devUrl": "http://brainconnect.dev"
+    "devUrl": "http://annakrzyzak.dev"
   }
 }
