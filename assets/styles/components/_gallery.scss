@@ -1,0 +1,72 @@
+// Gallery
+// -------------
+.gallery-container {
+    margin-top: 15px;
+
+    @include min-screen($desktop) {
+        margin-top: 25px;
+    }
+}
+
+.single-album__photos {
+    display: none;
+}
+
+.single-album__cover {
+    position: relative;
+
+    @include min-screen($tablet) {
+    }
+
+    @include min-screen($desktop) {
+
+    }
+
+    &::after {
+        content: attr(data-title);
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        padding: 20px 0;
+        background-color: $transparent-black;
+        text-align: center;
+        color: $white;
+        font-size: 20px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        opacity: 1;
+        transition: opacity 600ms ease;
+
+        @include min-screen($desktop) {
+            opacity: 0;
+        }
+    }
+
+    .no-touch &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.single-album {
+    padding: 10px;
+}
+
+.single-album__link {
+    position: relative;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+
+    @include min-screen($tablet) {
+        height: 200px;
+    }
+
+    @include min-screen($desktop) {
+
+    }
+}
